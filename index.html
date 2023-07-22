@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- daisy & tailwind ui cmd -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- tailwind coustom -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              "btn-cl": "#E76F51",
+              "slider-cl": "rgba(231, 111, 81, 0.10)",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- style part -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        /* background: #fff; */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="px-5 sm:px-24">
+        <div class="navbar bg-base-100">
+          <div class="flex-1">
+            <div class="dropdown">
+              <label tabindex="0" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </label>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li><a>Home</a></li>
+                <li><a>Shop</a></li>
+                <li><a>News</a></li>
+                <li><a>Content</a></li>
+              </ul>
+            </div>
+            <a class="normal-case text-base sm:text-4xl font-bold text-black"
+              >Bike Dekho</a
+            >
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a>Home</a></li>
+              <li><a>Shop</a></li>
+              <li><a>News</a></li>
+              <li><a>Content</a></li>
+            </ul>
+          </div>
+          <div class="">
+            <a class="btn bg-btn-cl text-white font-bold">Login</a>
+          </div>
+        </div>
+      </nav>
+      <!-- navber end -->
+
+      <!-- slider part start -->
+      <div class="carousel w-full py-5 lg:py-0 lg:h-[550px] bg-slider-cl">
+        <!-- slider 1 -->
+        <div id="slide1" class="carousel-item relative w-full">
+          <!-- justify-butween hocche na kno -->
+          <div
+            class="flex flex-col lg:flex-row justify-between items-center px-5 sm:px-24 w-full"
+          >
+            <div class="flex-1 space-y-7">
+              <h1 class="text-4xl sm:text-6xl text-black font-bold">
+                Ride-on R15 V4 with Smile
+              </h1>
+              <p class="text-base">
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint. Velit officia consequat duis enim velit mollit.
+              </p>
+              <div class="">
+                <a class="btn bg-btn-cl text-white font-bold">Purchase</a>
+              </div>
+            </div>
+            <div class="flex-1">
+              <img src="/images/slider/bike1.png" class="w-1/1 lg:w-3/4" />
+            </div>
+          </div>
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <a href="#slide4" class="btn btn-circle">❮</a>
+            <a href="#slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <!-- slider 2 -->
+        <div id="slide2" class="carousel-item relative w-full">
+          <div
+            class="flex flex-col lg:flex-row justify-between items-center px-5 sm:px-24 w-full"
+          >
+            <div class="flex-1 space-y-7">
+              <h1 class="text-4xl sm:text-6xl text-black font-bold">
+                Ride-on R15 V4 with Smile
+              </h1>
+              <p class="text-base">
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint. Velit officia consequat duis enim velit mollit.
+              </p>
+              <div class="">
+                <a class="btn bg-btn-cl text-white font-bold">Purchase</a>
+              </div>
+            </div>
+            <div class="flex-1">
+              <img src="/images/slider/bike2.png" class="w-1/1 lg:w-3/4" />
+            </div>
+          </div>
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <a href="#slide1" class="btn btn-circle">❮</a>
+            <a href="#slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <!-- slider 3 -->
+        <div id="slide3" class="carousel-item relative w-full">
+          <div
+            class="flex flex-col lg:flex-row justify-between items-center px-5 sm:px-24 w-full"
+          >
+            <div class="flex-1 space-y-7">
+              <h1 class="text-4xl sm:text-6xl text-black font-bold">
+                Ride-on R15 V4 with Smile
+              </h1>
+              <p class="text-base">
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint. Velit officia consequat duis enim velit mollit.
+              </p>
+              <div class="">
+                <a class="btn bg-btn-cl text-white font-bold">Purchase</a>
+              </div>
+            </div>
+            <div class="flex-1">
+              <img src="/images/slider/bike3.png" class="w-1/1 lg:w-3/4" />
+            </div>
+          </div>
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <a href="#slide2" class="btn btn-circle">❮</a>
+            <a href="#slide4" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <!-- slider 4 -->
+        <div id="slide4" class="carousel-item relative w-full">
+          <div
+            class="flex flex-col lg:flex-row justify-between items-center px-5 sm:px-24 w-full"
+          >
+            <div class="flex-1 space-y-7">
+              <h1 class="text-4xl sm:text-6xl text-black font-bold">
+                Ride-on R15 V4 with Smile
+              </h1>
+              <p class="text-base">
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint. Velit officia consequat duis enim velit mollit.
+              </p>
+              <div class="">
+                <a class="btn bg-btn-cl text-white font-bold">Purchase</a>
+              </div>
+            </div>
+            <div class="flex-1">
+              <img src="/images/slider/bike4.png" class="w-1/1 lg:w-3/4" />
+            </div>
+          </div>
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <a href="#slide3" class="btn btn-circle">❮</a>
+            <a href="#slide1" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="px-5 sm:px-24">
+      <!-- seection 1 -->
+      <section class="my-16">
+        <h1 class="text-5xl font-semibold text-center mb-20">Latest News</h1>
+
+        <div
+          class="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-5 w-11/12 mx-auto"
+        >
+          <!-- card 1 -->
+          <div class="p-4 card bg-base-100 shadow-xl">
+            <figure>
+              <img src="/images/others/latest1.png" alt="latest1.png" />
+            </figure>
+            <div class="card-body px-0">
+              <h2 class="card-title text-3xl text-[#18191F]">Shoes!</h2>
+              <p class="text-base text-[#6C6C6C]">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus,
+                fermentum amet faucibus sed id nisi lectus at.
+              </p>
+              <div class="card-actions">
+                <button
+                  class="btn bg-white hover:bg-btn-cl hover:text-white text-btn-cl border-btn-cl"
+                >
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- card 2 -->
+          <div class="p-4 card bg-base-100 shadow-xl">
+            <figure>
+              <img src="/images/others/latest2.png" alt="latest1.png" />
+            </figure>
+            <div class="card-body px-0">
+              <h2 class="card-title text-3xl text-[#18191F]">Shoes!</h2>
+              <p class="text-base text-[#6C6C6C]">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus,
+                fermentum amet faucibus sed id nisi lectus at.
+              </p>
+              <div class="card-actions">
+                <button
+                  class="btn bg-white hover:bg-btn-cl hover:text-white text-btn-cl border-btn-cl"
+                >
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- card 3 (1) -->
+          <div class="p-4 card bg-base-100 shadow-xl hidden lg:block">
+            <figure>
+              <img src="/images/others/latest3.png" alt="latest1.png" />
+            </figure>
+            <div class="card-body px-0">
+              <h2 class="card-title text-3xl text-[#18191F]">Shoes!</h2>
+              <p class="text-base text-[#6C6C6C]">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus,
+                fermentum amet faucibus sed id nisi lectus at.
+              </p>
+              <div class="card-actions">
+                <button
+                  class="btn bg-white hover:bg-btn-cl hover:text-white text-btn-cl border-btn-cl"
+                >
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- card 3 (2)  -->
+          <div
+            class="p-4 card bg-base-100 shadow-xl lg:hidden lg:col-start-1 md:col-start-1 md:w-2/3 md:mx-auto md:col-end-3"
+          >
+            <figure>
+              <img src="/images/others/latest3.png" alt="latest1.png" />
+            </figure>
+            <div class="card-body px-0">
+              <h2 class="card-title text-3xl text-[#18191F]">Shoes!</h2>
+              <p class="text-base text-[#6C6C6C]">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus,
+                fermentum amet faucibus sed id nisi lectus at.
+              </p>
+              <div class="card-actions">
+                <button
+                  class="btn bg-white hover:bg-btn-cl hover:text-white text-btn-cl border-btn-cl"
+                >
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section 2 -->
+      <section class="my-16">
+        <h1 class="text-5xl font-semibold text-center mb-20">
+          Happy <span class="text-btn-cl">Clients says</span>
+        </h1>
+
+        <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- card 1 -->
+          <div class="card bg-base-100 shadow-xl border">
+            <figure class="px-10 pt-10">
+              <img
+                width="50%"
+                src="/images/others/user-1.png"
+                alt="user-1.png"
+                class="rounded-xl"
+              />
+            </figure>
+            <div class="card-body items-center text-center">
+              <p class="text-base text-[#6C6C6C] font-thin">
+                Slate helps you see how many more days you need to work to reach
+                your financial goal for the month and year.
+              </p>
+              <div class="rating">
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                  checked
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+              </div>
+              <h4 class="text-[#23A6F0] text-sm font-semibold">Regina Miles</h4>
+              <h4 class="text-sm font-semibold">Banker</h4>
+            </div>
+          </div>
+          <!-- card 2 -->
+          <div class="card bg-base-100 shadow-xl border">
+            <figure class="px-10 pt-10">
+              <img
+                width="50%"
+                src="/images/others/user-2.png"
+                alt="user-1.png"
+                class="rounded-xl"
+              />
+            </figure>
+            <div class="card-body items-center text-center">
+              <p class="text-base text-[#6C6C6C] font-thin">
+                Slate helps you see how many more days you need to work to reach
+                your financial goal for the month and year.
+              </p>
+              <div class="rating">
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                  checked
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+              </div>
+              <h4 class="text-[#23A6F0] text-sm font-semibold">Regina Miles</h4>
+              <h4 class="text-sm font-semibold">Banker</h4>
+            </div>
+          </div>
+          <!-- card 3 -->
+          <div class="card sm:col-span-2 bg-base-100 shadow-xl border">
+            <figure class="px-10 pt-10">
+              <img
+                width="50%"
+                src="/images/others/user-3.png"
+                alt="user-1.png"
+                class="rounded-xl"
+              />
+            </figure>
+            <div class="card-body items-center text-center">
+              <p class="text-base text-[#6C6C6C] font-thin">
+                Slate helps you see how many more days you need to work to reach
+                your financial goal for the month and year.
+              </p>
+              <div class="rating">
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                  checked
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+              </div>
+              <h4 class="text-[#23A6F0] text-sm font-semibold">Regina Miles</h4>
+              <h4 class="text-sm font-semibold">Banker</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+<!-- section 3 -->
+      <section class="my-16">
+        <h1 class="text-5xl font-semibold text-center mb-20">
+          Frequently Asked <span class="text-btn-cl">Questions</span>
+        </h1>
+        <div class="flex gap-8 lg:gap-0 flex-col lg:flex-row justify-between items-center">
+          <div class="">
+            <img class="w-1/1 lg:w-3/4" src="images/others/faq.png" alt="faq.png">
+          </div>
+          <div class=" w-3/4">
+            <div class="join join-vertical w-full">
+              <!-- question 1 -->
+              <div class="collapse collapse-arrow join-item border border-base-300">
+                <input type="radio" name="my-accordion-4" checked="checked" /> 
+                <div class="collapse-title text-xl font-medium">
+                  What are the most important things I should
+                  know about riding a bike?"
+                </div>
+                <div class="collapse-content"> 
+                  <p class="text-[#7E848C] text-base font-thin">Safety First! Always obey the rules of the road. Obey all traffic signals, signs, and laws. Get in the mindset of “driving” your bike—not just “riding” your bike. This will help you be a more focused and legally compliant bike rider. </p>
+                </div>
+              </div>
+              <!-- Question 2 -->
+              <div class="collapse collapse-arrow join-item border border-base-300">
+                <input type="radio" name="my-accordion-4" /> 
+                <div class="collapse-title text-xl font-medium">
+                  How can I tell if my helmet is old and I need a 
+                  new one?"
+                </div>
+                <div class="collapse-content"> 
+                  <p class="text-[#7E848C] text-base font-thin">Helmets are an essential safety gear for cyclists, and it's crucial to ensure they are in good condition to provide adequate protection. Here are some signs that indicate your helmet is old and you may need a new one:
+
+                    Age: Most helmet manufacturers recommend replacing your helmet every 3 to 5 years, even if it appears to be in good condition. Over time, the materials in the helmet may degrade, reducing its ability to absorb impact.
+                    
+                    Visible damage: Inspect your helmet for any visible signs of damage, such as cracks, dents, or significant scratches. If you notice any structural damage, it's time to replace the helmet.
+                    
+                    Foam deterioration: The foam padding inside the helmet may deteriorate over time, especially if it's exposed to heat or sunlight. If you notice crumbling or disintegrating foam, the helmet needs to be replaced.
+                    
+                    Loose or broken straps: Check the chin straps and retention system of the helmet. If the straps are frayed, torn, or no longer securely fasten, it's time for a new helmet.
+                    
+                    Worn-out interior padding: The interior padding of the helmet should be intact and not worn out. If the padding is thinning or falling apart, consider replacing the helmet.
+                    
+                    Previous impact: If the helmet has been involved in a crash or suffered a significant impact, it should be replaced, even if there is no visible damage. Helmets are designed to absorb a single impact, and their effectiveness may be compromised after a collision.
+                    
+                    Fit issues: If the helmet no longer fits securely on your head or feels uncomfortable, it's time to get a new one that provides a proper and snug fit.
+                    
+                    Remember that helmets are designed to protect your head during a single impact. After a significant impact or if the helmet shows any signs of damage, it should be replaced, even if it seems to be working fine. It's better to invest in a new helmet for optimal safety and protection.</p>
+                </div>
+              </div>
+              <!-- Question 3 -->
+              <div class="collapse collapse-arrow join-item border border-base-300">
+                <input type="radio" name="my-accordion-4" /> 
+                <div class="collapse-title text-xl font-medium">
+                  My bike has been in storage is it safe to ride?"
+                </div>
+                <div class="collapse-content"> 
+                  <p class="text-[#7E848C] text-base font-thin">If your bike has been in storage for an extended period, it's essential to perform a thorough inspection before riding it to ensure it is safe and in good working condition. Here are some steps to follow:
+
+                    Check the tires: Look for any visible damage, such as cracks, bulges, or excessive wear. Inflate the tires to the recommended pressure if needed.
+                    
+                    Inspect the brakes: Squeeze the brake levers to check if the brakes are working correctly. Ensure the brake pads are in good condition and make proper contact with the rims.
+                    
+                    Examine the chain and drivetrain: Check for rust, dirt buildup, or any signs of damage on the chain, cassette, and chainrings. Lubricate the chain if necessary.
+                    
+                    Test the gears: Shift through all the gears to make sure the derailleurs are functioning smoothly and the chain moves freely between gears.
+                    
+                    Check the frame and components: Inspect the frame for any cracks, dents, or signs of structural damage. Check the handlebars, stem, saddle, and pedals to ensure they are securely attached.
+                    
+                    Check the wheels: Spin the wheels to check for any wobbling or misalignment. Ensure the wheels are securely fastened.
+                    
+                    Lubricate moving parts: Apply lubricant to the pivot points of brakes, derailleurs, and other moving parts to ensure smooth operation.
+                    
+                    Test the suspension (if applicable): If your bike has suspension, check that it is working properly and adjust it according to your weight and riding preferences.
+                    
+                    If you are not confident in inspecting and maintaining your bike yourself, it's a good idea to take it to a professional bike shop for a thorough checkup and tune-up before riding. They can make sure everything is in proper working order and address any potential safety concerns.
+                    
+                    By taking the time to inspect and prepare your bike for riding after being in storage, you can ensure a safer and more enjoyable biking experience.</p>
+                </div>
+              </div>
+              <!-- Question 4 -->
+              <div class="collapse collapse-arrow join-item border border-base-300">
+                <input type="radio" name="my-accordion-4" /> 
+                <div class="collapse-title text-xl font-medium">
+                  What rules should I follow when riding my bike?"
+                </div>
+                <div class="collapse-content"> 
+                  <p class="text-[#7E848C] text-base font-thin">When riding your bike, it's important to follow certain rules and guidelines to ensure your safety and the safety of others. Here are some essential rules to keep in mind while riding your bike:
+
+                    Wear a helmet: Always wear a properly fitting helmet to protect your head in case of a fall or accident.
+                    
+                    Obey traffic laws: Bicycles are considered vehicles in many places, so follow traffic rules, signals, and signs. Stop at stop signs and red lights, and yield to pedestrians.
+                    
+                    Use hand signals: Indicate your intentions by using hand signals when turning or changing lanes to alert drivers and other cyclists.
+                    
+                    Ride in the same direction as traffic: Always ride on the right side of the road, in the same direction as traffic flow.
+                    
+                    Stay visible: Wear bright and reflective clothing, especially in low-light conditions. Use lights and reflectors on your bike to increase visibility.
+                    
+                    Be cautious at intersections: Approach intersections with extra care, and make eye contact with drivers before proceeding.
+                    
+                    Use bike lanes and paths: Whenever available, use designated bike lanes or paths to separate yourself from traffic.
+                    
+                    Stay focused: Avoid distractions such as using your phone while riding. Keep both hands on the handlebars and stay alert to your surroundings.
+                    
+                    Watch for opening car doors: Be cautious when riding near parked cars to avoid colliding with opening doors.
+                    
+                    Yield to pedestrians: Be respectful of pedestrians and yield the right-of-way to them, especially on sidewalks and crosswalks.
+                    
+                    Avoid riding on sidewalks: In many areas, riding on sidewalks is not permitted or may be dangerous. Use bike lanes or the road instead.
+                    
+                    Maintain your bike: Regularly inspect and maintain your bike to ensure it is in good working condition. Check brakes, tires, and other components before each ride.
+                    
+                    By following these rules and exercising caution, you can enjoy a safe and enjoyable biking experience while reducing the risk of accidents and injuries. Always prioritize safety and be considerate of other road users.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="text-[#fff] bg-[#0B0D17] flex justify-between items-center px-36 py-16" >
+      <div class="font-thin flex flex-col gap-2 ">
+        <div class="flex ">
+          <p><a href="#">Download Now</a></p>
+          <p>License</p>
+        </div>
+        <ul class="flex gap-3">
+          <li>about</li>
+          <li>Features</li>
+          <li>Pricing</li>
+          <li>Careers</li>
+          <li>Helps</li>
+          <li>PrivacyPolicy</li>
+        </ul>
+        <small class="text-[#D9DBE1] mt-4">© 2020 bike. All rights reserved</small>
+      </div>
+      <div class="">
+        <p class="font-thin mb-4">Get the App</p>
+        <div class="flex flex-col gap-3">
+          <img class="w-3/5" src="images/others/android.png" alt="android.png">
+          <img class="w-3/5" src="images/others/ios.png" alt="ios.png">
+        </div>
+      </div>
+    </footer>
+    <!-- git remote add origin https://github.com/tayeb012/daisy-tailwind-biker-zone.git -->
+  </body>
+</html>
